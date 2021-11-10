@@ -1,0 +1,37 @@
+{
+  "name": "PGS-Dubai",
+  "description": "PGS Frontend Framework",
+  "version": "2.1",
+  "private": true,
+  "author": "Akhil",
+  "license": "ISC",
+  "scripts": {
+    "postinstall": "grunt",
+    "start": "grunt serve",
+    "build": "grunt"
+  },
+  "devDependencies": {
+    "autoprefixer": "^9.1.5",
+    "cssnano": "^4.1.1",
+    "grunt": "^1.0.3",
+    "grunt-assemble": "^0.6.3",
+    "grunt-autoprefixer": "^3.0.4",
+    "grunt-banner": "^0.6.0",
+    "grunt-browser-sync": "^2.2.0",
+    "grunt-contrib-clean": "^2.0.0",
+    "grunt-contrib-copy": "^1.0.0",
+    "grunt-contrib-imagemin": "^2.0.1",
+    "grunt-contrib-uglify": "^4.0.0",
+    "grunt-contrib-watch": "^1.1.0",
+    "grunt-critical": "^1.1.1",
+    "grunt-postcss": "^0.9.0",
+    "grunt-replace": "^1.0.1",
+    "grunt-sass": "^3.0.2",
+    "node-sass": "^4.11.0",
+    "pixrem": "^4.0.1"
+  },
+  "dependencies": {
+    "bourbon-neat": "2.1.0",
+    "include-media": "1.4.9"
+  }
+}

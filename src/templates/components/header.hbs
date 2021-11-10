@@ -1,0 +1,142 @@
+{{!-- <div id="custom-pointer">
+	<span></span>
+</div> --}}
+
+<header id="header">
+  <div class="navbar ">
+    <div class="barnd_box left_">
+      <a class="navbar-brand" href="index.html" title="">
+        <img src="{{assets}}/images/logo.png" alt="" >
+      </a>
+      </div>
+    <div class="hd_nav_box">
+      <ul>
+        {{!-- <a class="no_hide"><a class="mn_link " href="index_ar.html" title="" ><span>العربية</span></a></a> --}}
+
+        <li>
+           <a class="header-lang" href="{{page_ar}}" title="" ><span> عربى </span></a>
+        </ul>
+    </div>
+    <div class="barnd_box right_">
+      <a class="navbar-brand" href="{{menuLink 'index'}}" title=""><img src="{{assets}}/images/logo_2.png" alt=""></a></div>
+
+    <div class="nav_box_wrapper" id="master_menu">
+      <nav class="navbar-inner">
+        <ul class="navbar-nav ">
+          <li class="nav-item">
+            <a href="#" class="nav-link scroll" data-href="#home"  aria-title="" >Home</a>
+              <div class="menu-line"></div>
+            <div class="menu-desc">
+              <ul>
+                <li><a  href="{{menuLink 'index'}}"  class="nav-link scroll" data-href="#home"> Home</a> </li>
+
+              </ul>
+            </div>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link scroll" data-href="#about"  aria-title="" >About</a>
+            <div class="menu-line"></div>
+            <div class="menu-desc">
+              <ul>
+                <li><a href="{{menuLink 'index'}}" class="nav-link scroll" data-href="#about"  >About</a></li>
+              </ul>
+            </div>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link scroll" data-href="#policies"  aria-title="" >Members</a>
+              <div class="menu-line"></div>
+            <div class="menu-desc">
+              <ul>
+                <li><a  href="{{menuLink 'index'}}" class="nav-link scroll" data-href="#members" >Members</a> </li>
+
+              </ul>
+            </div>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link scroll" data-href="#objectives"  aria-title="" >Objectives</a>
+             <div class="menu-line"></div>
+                <div class="menu-desc">
+              <ul>
+                <li><a  href="{{menuLink 'index'}}" class="nav-link scroll" data-href="#objectives">Objectives</a> </li>
+
+              </ul>
+            </div>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link scroll" data-href="#advisory"  aria-title="" >Advisory Boards</a>
+              <div class="menu-line"></div>
+            <div class="menu-desc">
+              <ul>
+                <li><a  href="{{menuLink 'index'}}" class="nav-link scroll" data-href="#advisory" >Advisory Boards</a> </li>
+
+              </ul>
+            </div>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link scroll" data-href="#initiatives"  aria-title="" >Initiatives</a>
+              <div class="menu-line"></div>
+            <div class="menu-desc">
+              <ul>
+                <li><a href="{{menuLink 'index'}}" class="nav-link scroll" data-href="#initiatives" >Initiatives</a> </li>
+
+              </ul>
+            </div>
+          </li>
+          
+          
+          <li class="nav-item">
+            <a href="#" class="nav-link scroll" data-href="#news"  aria-title="" >News/Updates</a>
+              <div class="menu-line"></div>
+            <div class="menu-desc">
+              <ul>
+                <li><a href="{{menuLink 'newsandupdates'}}" class="nav-link scroll" data-href="#news">News/Updates</a></li>
+
+              </ul>
+            </div>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link scroll" data-href="#contact"  aria-title="" >Contact us</a>
+              <div class="menu-line"></div>
+            <div class="menu-desc">
+              <ul>
+                <li><a href="{{menuLink 'contact'}}" class="nav-link scroll" data-href="#contact">Contact us</a></li>
+
+              </ul>
+            </div>
+          </li>
+        </ul>
+      </nav>
+    </div>   {{!----}}
+  </div>
+</header>
+
+{{!-- <div id="cursor" class="c_">
+  <span class="t_scroll">
+    <span class="inner_">
+      <span>Scroll</span>
+      <span>Scroll</span>
+    </span>
+  </span>
+  <span class="v_scroll">
+    <span class="inner_">
+      <span>Visit</span>
+      <span>Visit</span>
+    </span>
+  </span>
+
+  <span class="arrow">
+    <span class="svg_wrap">
+    <svg x="0px" y="0px" viewBox="0 0 60 60" style="enable-background:new 0 0 60 60;" xml:space="preserve" fill="#6f6f6f">
+      <g>
+        <path d="M44.394,13.091L8.633,29.503c-0.399,0.184-0.632,0.605-0.574,1.041s0.393,0.782,0.826,0.854l15.833,2.653l1.809,14.95
+    c0.054,0.438,0.389,0.791,0.824,0.865c0.057,0.01,0.113,0.015,0.169,0.015c0.375,0,0.726-0.211,0.896-0.556l17.291-34.882
+    c0.188-0.38,0.117-0.837-0.178-1.141S44.776,12.914,44.394,13.091z M28.11,45.438l-1.496-12.369
+    c-0.054-0.44-0.391-0.793-0.828-0.866l-13.362-2.239L42.66,16.087L28.11,45.438z" />
+        <path d="M30,0C13.458,0,0,13.458,0,30s13.458,30,30,30s30-13.458,30-30S46.542,0,30,0z M30,58C14.561,58,2,45.439,2,30
+    S14.561,2,30,2s28,12.561,28,28S45.439,58,30,58z" />
+      </g>
+    </svg>
+  </span>
+
+  </span>
+</div> --}}

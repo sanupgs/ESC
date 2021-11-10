@@ -1,0 +1,252 @@
+// Text Mixins
+@mixin smText(){
+    font-size: 0.9vw;
+
+    @media only screen and (min-width: 1025px) and (max-width: 1376px) and (min-height: 500px) and (max-height: 940px) {
+        font-size: 1vw;
+    }
+
+    @media only screen and (min-width: 768px) and (max-width: 1024px) and (orientation: portrait) {
+        font-size: 13px;
+    }
+    @media only screen and (max-width: 767px) {
+        font-size: 12px;
+    }
+}
+
+@mixin smText2(){
+    font-size: 0.99vw;
+
+    @media only screen and (min-width: 1025px) and (max-width: 1376px) and (min-height: 500px) and (max-height: 940px) {
+        font-size: 1.1vw;
+    }
+
+    @media only screen and (min-width: 768px) and (max-width: 1024px) and (orientation: portrait) {
+        font-size: 16px;
+    }
+    @media only screen and (max-width: 767px) {
+        font-size: 14px;
+    }
+}
+
+
+@mixin thumbTitle(){
+    font-size: 1.8vw;
+
+    @media only screen and (min-width: 1025px) and (max-width: 1376px) and (min-height: 500px) and (max-height: 940px) {
+        font-size: 1.8vw;
+    }
+
+    @media only screen and (min-width: 768px) and (max-width: 1024px) and (orientation: portrait) {
+        font-size: 28px;
+    }
+    @media only screen and (max-width: 767px) {
+        font-size: 28px;
+    }
+}
+
+@mixin lgText2(){
+    font-size: 4.6vw;
+    line-height: 1.2;
+    @media only screen and (min-width: 1025px) and (max-width: 1376px) and (min-height: 500px) and (max-height: 940px) {
+        font-size: 4.3vw;
+    }
+
+    @media only screen and (min-width: 768px) and (max-width: 1024px) and (orientation: portrait) {
+        font-size: 24px;
+    }
+    @media only screen and (max-width: 767px) {
+        font-size: 24px;
+    }
+}
+
+@mixin lgText(){
+    font-size: 2.9vw;
+    line-height: 1.05;
+
+    @media only screen and (min-width: 768px) and (max-width: 1024px) and (orientation: portrait) {
+        font-size: 20px;
+    }
+    @media only screen and (max-width: 767px) {
+        font-size: 20px;
+    }
+}
+
+@mixin title(){
+    font-size: 1.7vw;
+    font-weight: 500;
+    line-height: 1.4;
+
+
+
+    @media only screen and (min-width: 768px) and (max-width: 1024px) and (orientation: portrait) {
+        font-size: 22px;
+    }
+    @media only screen and (max-width: 980px) {
+        font-size: 17px;
+    }
+    @media only screen and (max-width: 767px) {
+        font-size: 19px;
+    }
+}
+
+@mixin mdText(){
+    font-size: 1.1vw;
+
+    @media only screen and (min-width: 1025px) and (max-width: 1376px) and (min-height: 500px) and (max-height: 940px) {
+        font-size: 1.2vw;
+    }
+
+    @media only screen and (min-width: 768px) and (max-width: 1024px) and (orientation: portrait) {
+        font-size: 15px;
+    }
+    @media only screen and (max-width: 767px) {
+        font-size: 16px;
+    }
+}
+
+
+@mixin mdText2($size:1.2vw){
+    font-size: $size;
+
+    @media only screen and (min-width: 1025px) and (max-width: 1376px) and (min-height: 500px) and (max-height: 940px) {
+        font-size: calc(#{$size + 0.1vw});
+    }
+
+    @media only screen and (min-width: 768px) and (max-width: 1024px) and (orientation: portrait) {
+        font-size: calc(#{$size + 0.3vw});
+    }
+    @media only screen and (max-width: 767px) {
+        font-size: 18px;
+    }
+}
+
+
+@mixin mdText3($size:1.5vw){
+  font-size: $size;
+
+  @media only screen and (min-width: 1025px) and (max-width: 1376px) and (min-height: 500px) and (max-height: 940px) {
+      font-size: calc(#{$size + 0.1vw});
+  }
+  @media only screen and (max-width: 1024px) {
+      font-size: 20px;
+  }
+}
+
+@mixin maintitle(){
+    font-size: 4.5vw;
+    font-weight: bold;
+    line-height: 1.1;
+
+    @media only screen and (min-width: 1025px) and (max-width: 1376px) and (min-height: 500px) and (max-height: 940px) {
+        font-size: 4.3vw;
+    }
+
+
+    @media only screen and (max-width: 767px) {
+        font-size: 35px;
+    }
+}
+
+@mixin link_(){
+    font-size: 1vw;
+    font-weight: 500;
+    line-height: 1;
+    @media only screen and (min-width: 1025px) and (max-width: 1376px) and (min-height: 500px) and (max-height: 940px) {
+        font-size: 1.2vw;
+    }
+
+    @media only screen and (min-width: 768px) and (max-width: 1024px) and (orientation: portrait) {
+        font-size: 15px;
+    }
+    @media only screen and (max-width: 767px) {
+        font-size: 13px;
+    }
+}
+
+
+@mixin  bg_contain() {
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+@mixin  brand_overlay() {
+    &::after {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background-color: $brand-color;
+        opacity: 0;
+        transition: all .5s ease-in-out;
+      }
+}
+
+@mixin  anim_overlay($delay:0s) {
+    &::after {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 130%;
+        height: 100%;
+        background-color: $color-white;
+        transition: all .8s ease-in-out $delay;
+        z-index: 10;
+        transform: skewX(-20deg) translateX(-11%);
+        @media only screen and (max-width: 980px) {
+            width: 200%;
+        }
+      }
+}
+
+@mixin  anim_overlay_done() {
+    &::after {
+        transform: skewX(-20deg) translateX(130%);
+    }
+}
+
+@mixin  rtl_anim_overlay_done() {
+    &::after {
+        transform: skewX(-20deg) translateX(-130%);
+    }
+}
+
+
+
+// Animation Control
+@mixin animStretch() {
+    transition: opacity .2s linear .5s,transform 1.4s cubic-bezier(.19,1,.22,1) .5s;
+    transform: scaleY(1.5) translateY(1em);
+    transform-origin: top;
+    opacity: 0;
+}
+
+@mixin animPresp(){
+    transform: rotateX(11deg) translateX(0) translateY(0) translateZ(18px);
+    transform-origin: 0 0;
+    opacity: 0;
+    transition: transform 1.2s cubic-bezier(.165, .84, .44, 1) .2s, opacity .6s cubic-bezier(.165, .84, .44, 1) .2s;
+}
+
+@mixin animate($value:none) {
+    transform: $value;
+    opacity: 1;
+}
+
+@mixin  tranDelay($items:10,$intervels:0.2s,  $initDelay:0s) {
+    @for $i from 1 through $items {
+        &:nth-child(#{$i}){
+            transition-delay: #{$i*$intervels + $initDelay};
+        }
+    }
+}
+
+
+@mixin gradientBg() {
+    background: rgb(201,173,125);
+    background: linear-gradient(280deg, rgba(201,173,125,1) 0%, rgba(179,140,73,1) 100%);
+}

@@ -1,0 +1,143 @@
+<!-- Styles
+<noscript id="deferred-styles">
+{{#isRTL "rtl"}}
+<link rel="stylesheet" type="text/css" href="{{assets}}/styles/{{style}}-rtl.css">
+{{else}}
+{{/isRTL}}
+</noscript>
+<script>
+    var loadDeferredStyles = function() {
+    var addStylesNode = document.getElementById("deferred-styles");
+    var replacement = document.createElement("div");
+    replacement.innerHTML = addStylesNode.textContent;
+    document.body.appendChild(replacement)
+    addStylesNode.parentElement.removeChild(addStylesNode);
+    };
+    var raf = window.requestAnimationFrame || window.mozRequestAnimationFrame ||
+        window.webkitRequestAnimationFrame || window.msRequestAnimationFrame;
+    if (raf) raf(function() { window.setTimeout(loadDeferredStyles, 0); });
+    else window.addEventListener('load', loadDeferredStyles);
+</script>-->
+<!-- Styles -->
+<!-- Scripts -->
+<script>
+    var isSafari = /^((?!chrome|android).)*safari/i.test(navigator.userAgent);
+    if (window.document.documentMode || isSafari) {
+        var blz_elemt = document.getElementsByClassName('b-lazy');
+        for (var i = 0; i < blz_elemt.length; ++i) {
+            var src_ = blz_elemt[i].dataset,
+            src_data = JSON.parse(JSON.stringify(src_));
+            for (var key in src_data) {
+                var file_path = src_data[key],
+                    file_ext = src_data['extension'],
+                    write_ext = '.jpg';
+                    if(typeof file_ext != "undefined") {
+                        write_ext = '.'+file_ext;
+                    }
+                if(file_path.split('.').pop() == 'webp') {
+                    new_file = file_path.substr(0, file_path.lastIndexOf(".")) + write_ext;
+                    blz_elemt[i].dataset[key] = new_file;
+                }
+            }
+        }
+    }
+</script>
+<script src="{{assets}}/scripts/lib/modernizr.min.js"></script>
+<script src="{{assets}}/scripts/lib/jquery-3.4.1.min.js"></script>
+<script src="{{assets}}/scripts/lib/jquery-migrate-3.0.1.min.js"></script>
+<script src="{{assets}}/scripts/min/page_plugins.js"></script>
+<script src="{{assets}}/scripts/min/page.js"></script>
+
+
+<script>
+
+
+if($(window).width() < 980){
+        // News
+    var members_slider = new Swiper('.news_wrapper .swiper-container', {
+        spaceBetween: 20,
+        slidesPerView: 2,
+        /*autoplay: {
+            delay: 5000,
+            disableOnInteraction: false,
+        },*/
+        navigation: {
+            nextEl: '.news_wrapper .nav_.right_',
+            prevEl: '.news_wrapper .nav_.left_',
+        },
+        breakpoints: {
+            640: {
+            slidesPerView: 1,
+            },
+            980: {
+            slidesPerView: 2,
+            }
+        }
+    });
+}
+
+var parad_slider = new Swiper('.parad_slider .swiper-container', {
+        spaceBetween: 30,
+        slidesPerView: 3, 
+        watchOverflow:true,
+        /*autoplay: {
+            delay: 5000,
+            disableOnInteraction: false,
+        },*/
+        navigation: {
+            nextEl: '.parad_slider .nav_.right_',
+            prevEl: '.parad_slider .nav_.left_',
+        },
+        breakpoints: {
+            980: {
+                slidesPerView: 2,
+            },
+            767: {
+                slidesPerView: 1,
+            }
+        },
+        on: {
+        init: function () {
+        window.bLazy.revalidate();
+            if ($(this)[0].snapGrid.length == 1) {
+                $('.parad_slider .nav_').hide();
+            }
+        },
+    }
+});
+
+
+var partner_slide = new Swiper('.partner_sec .swiper-container', {
+        spaceBetween: 15,
+        slidesPerView: 4, 
+        watchOverflow:true,
+        /*autoplay: {
+            delay: 5000,
+            disableOnInteraction: false,
+        },*/
+        navigation: {
+            nextEl: '.partner_sec .nav_.right_',
+            prevEl: '.partner_sec .nav_.left_',
+        },
+        breakpoints: {
+            980: {
+                slidesPerView: 3,
+            },
+            767: {
+                slidesPerView: 2,
+            }
+        },
+        on: {
+        init: function () {
+        window.bLazy.revalidate();
+            if ($(this)[0].snapGrid.length == 1) {
+                $('.parad_slider .nav_').hide();
+            }
+        },
+    }
+});
+
+
+
+
+</script>
