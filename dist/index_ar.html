@@ -547,16 +547,15 @@
 
 
 <section class="home-section initiatives_section" id="initiatives">
-  <div class="container-fluid">
+  <div class="container">
       <div class="title_box  text-center">
-        <h2 class="section-title"><span>Initiatives</span></h2>
+        <h2 class="section-title"><span>Initiatives/Reports</span></h2>
       </div>
-
-      <div class="initiatives_wrapper">
+    <div class="initiatives_wrapper">
          <!-- Swiper -->
           <div class="swiper-container">
             <div class="swiper-wrapper">
-              <div class="swiper-slide init_item_ styl_1">
+              <div class="swiper-slide init_item_ styl_1 box-1">
                   <div class="inner_">
                     <div class="image_box">
                       <div class="shape_">
@@ -569,17 +568,17 @@
                     </div>
 
                     <div class="content_box">
-                      <div class="title_">Podcast
+                      <div class="title_">01Podcast
                       </div>
                       <div class="more-wrap ">
-                        <a href="initiatives_ar.html" class="btn_new" >
+                        <a href="./podcast.html" class="btn_new" >
                           <span>Read More</span>
                         </a>
                       </div>
                     </div>
                   </div>
               </div>
-              <div class="swiper-slide init_item_ styl_2">
+              <div class="swiper-slide init_item_ styl_2 box-2">
                   <div class="inner_">
                     <div class="image_box">
                       <div class="shape_">
@@ -592,18 +591,18 @@
                     </div>
 
                     <div class="content_box">
-                      <div class="title_">Science in progress
+                      <div class="title_">02Science in progress
                       </div>
 
                       <div class="more-wrap ">
-                        <a href="initiatives_ar.html" class="btn_new" >
+                        <a href="./scientist-residence.html" class="btn_new" >
                           <span>Read More</span>
                         </a>
                       </div>
                     </div>
                   </div>
               </div>
-              <div class="swiper-slide init_item_ styl_3">
+              <div class="swiper-slide init_item_ styl_1 box-1">
                   <div class="inner_">
                     <div class="image_box">
                       <div class="shape_">
@@ -611,45 +610,24 @@
                           <div class="number_">03</div>
                       </div>
                         <div class="img_box">
-                            <div class="img_ b-lazy" data-src="assets/images/init_img_3.webp" data-extension="jpg" ></div>
+                            <div class="img_ b-lazy" data-src="assets/images/init_img_2.webp" data-extension="jpg" ></div>
                         </div>
                     </div>
 
                     <div class="content_box">
-                      <div class="title_">Scientist in residence
+                      <div class="title_">03Science in progress
                       </div>
 
                       <div class="more-wrap ">
-                        <a href="initiatives_ar.html" class="btn_new" >
+                        <a href="./scientist-residence.html" class="btn_new" >
                           <span>Read More</span>
                         </a>
                       </div>
                     </div>
                   </div>
               </div>
-              <div class="swiper-slide init_item_ styl_1">
-                  <div class="inner_">
-                    <div class="image_box">
-                      <div class="shape_">
-                          <div class="img_ b-lazy" data-src="assets/images/triangle_dots.png" ></div>
-                          <div class="number_">04</div>
-                      </div>
-                        <div class="img_box">
-                            <div class="img_ b-lazy" data-src="assets/images/init_img_1.webp" data-extension="jpg" ></div>
-                        </div>
-                    </div>
+              
 
-                    <div class="content_box">
-                      <div class="title_">Mohammed bin Rashid Academy of Scientists (MBRAS)
-                      </div>
-                      <div class="more-wrap ">
-                        <a href="initiatives_ar.html" class="btn_new" >
-                          <span>Read More</span>
-                        </a>
-                      </div>
-                    </div>
-                  </div>
-              </div>
             </div>
           </div>
           <!-- Add Arrows -->
@@ -658,10 +636,8 @@
               <div class="nav_ right_"><div class="icon icon-arrow-01-01"></div></div>
             </div>
       </div>
-
   </div>
 </section>
-
 
 <!--
 <section class="home-section members_section" id="members">
@@ -1156,15 +1132,20 @@
 
   //$('.home-section.initiatives_section .initiatives_wrapper .init_item_ .inner_').height(i_hright);
   //$('.home-section.initiatives_section .initiatives_wrapper .swiper-slide').height(i_hright);
-    if($(window).width() > 1025){
-    var initiatives_slider = new Swiper('.initiatives_wrapper .swiper-container', {
+   var initiatives_slider = new Swiper('.initiatives_wrapper .swiper-container', {
         spaceBetween: 0,
-        slidesPerView: 3,
-        slidesPerGroup : 3,
-        watchSlidesVisibility: true,
-        watchSlidesProgress: true,
-        direction : 'vertical' ,
-        freeMode: false,
+        slidesPerView: 2,
+        slidesPerGroup: 2, 
+        speed:1000,
+        loop:false,
+        direction: 'horizontal',
+            breakpoints: {
+            767: {
+                slidesPerView: 1,
+                slidesPerGroup: 1, 
+            }
+        },
+        
        // autoHeight:true,
 
         /*autoplay: {
@@ -1181,13 +1162,8 @@
 
                 $('.initiatives_wrapper .init_item_.swiper-slide-active').addClass('in_view');
                 $('.initiatives_wrapper .init_item_.swiper-slide-active').next("div").addClass('in_view');
-                $('.initiatives_wrapper .init_item_.swiper-slide-active').next("div").next("div").addClass('in_view');
-                setTimeout(function() {
-                    var max = $('.initiatives_wrapper .init_item_.swiper-slide-active .inner_ .image_box').height();
-
-              $('.initiatives_wrapper .swiper-container .swiper-slide ').css('height',(max) );
-                $('.initiatives_wrapper .swiper-container').css('max-height',(max * 3) );
-                },500);
+                //$('.initiatives_wrapper .init_item_.swiper-slide-active').next("div").next("div").addClass('in_view');
+                
 
             },
             transitionStart: function () {
@@ -1195,77 +1171,15 @@
 
                 $('.initiatives_wrapper .init_item_.swiper-slide-active').addClass('in_view');
                 $('.initiatives_wrapper .init_item_.swiper-slide-active').next("div").addClass('in_view');
-                $('.initiatives_wrapper .init_item_.swiper-slide-active').next("div").next("div").addClass('in_view');
+                //$('.initiatives_wrapper .init_item_.swiper-slide-active').next("div").next("div").addClass('in_view');
             },
             slideChange: function(){
               setTimeout(function(){
-                $('.initiatives_wrapper .init_item_.styl_3.swiper-slide-next').next("div").removeClass('styl_1');
-                $('.initiatives_wrapper .init_item_.styl_3.swiper-slide-next').next("div").addClass('styl_2');
+           
               },100)
             }
         }
     });
-
-    }else{
-
-
-
-
-
-        var initiatives_slider = new Swiper('.initiatives_wrapper .swiper-container', {
-        spaceBetween: 20,
-        slidesPerView: 3,
-        slidesPerGroup : 3,
-        /*autoplay: {
-            delay: 5000,
-            disableOnInteraction: false,
-        },*/
-        navigation: {
-            nextEl: '.initiatives_wrapper .nav_.right_',
-            prevEl: '.initiatives_wrapper .nav_.left_',
-        },
-        breakpoints: {
-        640: {
-          slidesPerView: 1,
-           slidesPerGroup : 1,
-          spaceBetween: 20,
-        },
-        980: {
-          slidesPerView: 2,
-          spaceBetween: 30,
-          slidesPerGroup : 2,
-        },
-        1024: {
-          slidesPerView: 2,
-          spaceBetween: 30,
-          slidesPerGroup : 2,
-        }
-      },
-        on: {
-            init: function () {
-                $('.initiatives_wrapper .init_item_').removeClass('in_view');
-
-                $('.initiatives_wrapper .init_item_.swiper-slide-active').addClass('in_view');
-
-                if($(window).width() > 640){
-                    $('.initiatives_wrapper .init_item_.swiper-slide-active').next("div").addClass('in_view');
-                }
-             //   $('.initiatives_wrapper .init_item_.swiper-slide-active').next("div").next("div").addClass('in_view');
-
-
-            },
-            transitionStart: function () {
-                $('.initiatives_wrapper .init_item_').removeClass('in_view');
-
-                $('.initiatives_wrapper .init_item_.swiper-slide-active').addClass('in_view');
-                if($(window).width() > 640){
-                    $('.initiatives_wrapper .init_item_.swiper-slide-active').next("div").addClass('in_view');
-                }
-               // $('.initiatives_wrapper .init_item_.swiper-slide-active').next("div").next("div").addClass('in_view');
-            }
-        }
-    });
-    }
 
     initiatives_slider.on('slideChange', function () {
         setTimeout(function() {
